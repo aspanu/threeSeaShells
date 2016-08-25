@@ -5,11 +5,11 @@
 
 import React, { Component } from 'react';
 
-class NextDate extends Component {
+export default class NextDate extends Component {
 
   render() {
     return <View>
-      
+
     </View>;
   }
 }
