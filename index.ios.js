@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 //import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
-import { Container, Content, Button, List, ListItem, InputGroup, Input, Icon } from 'native-base';
+import { Container, Content, Button, CheckBox, List, ListItem, InputGroup, Input, Icon } from 'native-base';
 import {Scene, Router, Actions} from 'react-native-router-flux';
 //import {LoginPage} from './login';
 
@@ -63,11 +63,48 @@ class Home extends Component {
   }
 
   render() {
-    return (
-        <View style={styles.container}>
-            <Text>{this.state.text}</Text>
+    if(this.state.text == "1") {
+      return (
+        <View style={styles.home}>
+        <Container>
+              <Content>
+
+              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='ios-trash' style={{ color: 'red'}}/> It's your duty day today!</Text>
+                  <List>
+                      <ListItem>
+                          <CheckBox checked={true} />
+                          <Text>Running dishwasher</Text>
+                      </ListItem>
+                      <ListItem>
+                          <CheckBox checked={false} />
+                          <Text>Cleaning coffe Machine</Text>
+                      </ListItem>
+                      <ListItem>
+                          <CheckBox checked={false} />
+                          <Text>Watering plants</Text>
+                      </ListItem>
+                      <ListItem>
+                          <CheckBox checked={false} />
+                          <Text>Cleaning Coffee System</Text>
+                      </ListItem>
+                  </List>
+              </Content>
+          </Container>
           </View>
-    );
+      );
+    } else if(this.state.text == "2") {
+      return (
+        <View style={styles.home}>
+        <Container>
+              <Content>
+
+              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='lihgt-up' style={{ color: 'green'}}/> It's not your duty day today!</Text>
+
+              </Content>
+          </Container>
+          </View>
+      );
+    }
   }
 }
 
@@ -77,6 +114,11 @@ const styles = StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    paddingTop: 150
+  },
+  home: {
+    flex: 3,
     backgroundColor: '#F5FCFF',
     paddingTop: 150
   },
