@@ -5,10 +5,11 @@
 
 import React, { Component } from 'react';
 import {
+   Text,
   View,
   StyleSheet,
 } from 'react-native';
-import {  Text,
+import {
   Container,
   Content,
   Icon,
@@ -63,12 +64,26 @@ export default class NextDate extends Component {
         <View style={styles.home}>
           <Container>
             <Content>
-              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='cog' style={{ color: 'green'}}/> It's not your duty day today!</Text>
+              <Text style={{fontSize: 30,textAlign: 'center'}}>
+              <Icon name='ios-person' style={{ color: 'green'}}/> It's not your duty day today!</Text>
              </Content>
            </Container>
         </View>
       );
-    }
+    }  else {
+      return (
+         <View style={styles.home}>
+           <Container>
+             <Content>
+               <Text style={{fontSize: 30,textAlign: 'center'}}>
+               <Icon name='ios-person' style={{ color: 'red', paddingRight: 5}}/> Access denied</Text>
+               <Text style={{fontSize: 25, paddingTop: 35, textAlign: 'center'}}>
+               You are not in a database</Text>
+              </Content>
+            </Container>
+         </View>
+       );
+     }
   }
 }
 
@@ -81,7 +96,7 @@ const styles = StyleSheet.create({
     paddingTop: 150
   },
   home: {
-   flex: 3,
+   flex: 1,
    backgroundColor: '#F5FCFF',
    paddingTop: 150
  },
