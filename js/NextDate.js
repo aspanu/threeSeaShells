@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 export default class NextDate extends Component {
 
@@ -12,11 +12,41 @@ export default class NextDate extends Component {
     super(props);
     console.log("Props: ", props.data);
     this.state = {text: props.data};
+    console.log("This.state: ", this.state);
   }
 
   render() {
-    return <View>
-      <Text>{this.props.name}</Text>
+    return <View style={styles.container} >
+      <Text> WHAT THE FUCK </Text>
+      <Text>{this.state.text}</Text>
     </View>;
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    paddingTop: 150
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+  input: {
+    width: 250
+  },
+  button: {
+    flex: 1,
+
+    marginTop: 5
+  }
+});

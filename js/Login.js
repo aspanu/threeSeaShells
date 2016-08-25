@@ -15,12 +15,10 @@ import {
 import { Container, Content, Button, List, ListItem, InputGroup, Input, Icon } from 'native-base';
 import {Actions} from 'react-native-router-flux';
 
-var globalText = "";
-
 export default class LoginComponent extends Component {
 
   buttonPress() {
-    Actions.nextDate(globalText);
+    Actions.nextDate(this.state.inputName);
   }
 
   render() {
@@ -32,9 +30,11 @@ export default class LoginComponent extends Component {
                   <Icon name='ios-person' />
                   <Input
                     placeholder='NAME'
-                    onChangeText={(txt) => globalText = txt}/>
+                    onChangeText={(txt) => this.setState({inputName: txt})}/>
                 </InputGroup>
-                <Button style={styles.button} onPress={this.buttonPress}> Enter </Button>
+                <Button
+                  style={styles.button}
+                  onPress={this.buttonPress.bind(this)}> Enter </Button>
               </Content>
           </Container>
         </View>
