@@ -13,54 +13,64 @@ import {
 } from 'react-native';
 //import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 import { Container, Content, Button, List, ListItem, InputGroup, Input, Icon } from 'native-base';
+import {Scene, Router, Actions} from 'react-native-router-flux';
+//import {LoginPage} from './login';
 
 class threeSeashells extends Component {
-
-  // _signIn() {
-  //
-  //   console.log("- - - - - - - - > _SignIn ")
-  //
-  //   GoogleSignin.signIn().then((user) => {
-  //     console.log(user);
-  //     this.setState({user: user})
-  //   })
-  //   .catch((err) => {
-  //     console.log('WRONG SIGN-IN', err);
-  //   })
-  //   .done();
-  // }
-
   render() {
+    return <Router>
+      <Scene key="root">
+        <Scene key="login" component={LoginPage} title="Login"/>
+        <Scene key="home" component={Home}/>
+      </Scene>
+    </Router>
+  }
+}
+var globalText = "";
+class LoginPage extends Component {
 
-    console.log("- - - > Just a test message")
-
+    constructor(props) {
+       super(props);
+       //this.state = {text: 'TEXT#123'};
+     }
+test() {
+  //console.log("State", this.state);
+  Actions.home(globalText);
+}
+render() {
     return (
-
-
         <View style={styles.container}>
-
-
             <Container>
               <Content>
                   <InputGroup style={styles.input}>
                     <Icon name='ios-person' />
-                    <Input placeholder='NAME' />
+                    <Input placeholder='NAME' onChangeText={(txt) => globalText = txt}/>
                   </InputGroup>
 
-                  <Button style={styles.button}> Enter </Button>
+                  <Button style={styles.button} onPress={this.test}> Enter </Button>
                 </Content>
             </Container>
-          </View>
-            /* <GoogleSigninButton
-          style={{width: 312, height:48}}
-          size={GoogleSigninButton.Size.Icon}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn.bind(this)}
-        />*/
 
+          </View>
     );
   }
 }
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    console.log("Props: ", props.data);
+    this.state = {text: props.data};
+  }
+
+  render() {
+    return (
+        <View style={styles.container}>
+            <Text>{this.state.text}</Text>
+          </View>
+    );
+  }
+}
+
 
 const styles = StyleSheet.create({
   container: {
@@ -88,6 +98,6 @@ const styles = StyleSheet.create({
 
     marginTop: 5
   }
-}); 
+});
 
 AppRegistry.registerComponent('threeSeashells', () => threeSeashells);
