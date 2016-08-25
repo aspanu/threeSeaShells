@@ -91,7 +91,7 @@ export default class NextDate extends Component {
 
 const styles = StyleSheet.create({
   home: {
-   flex: 3,
+   flex: 1,
    backgroundColor: '#F5FCFF',
    paddingTop: 100
  },
