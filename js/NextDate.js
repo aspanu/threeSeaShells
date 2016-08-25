@@ -6,15 +6,16 @@
 import React, { Component } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
+} from 'react-native';
+import {  Text,
   Container,
   Content,
   Icon,
   List,
   ListItem,
   CheckBox,
-} from 'react-native';
+} from 'native-base';
 
 export default class NextDate extends Component {
 
