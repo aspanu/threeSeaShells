@@ -24,6 +24,22 @@ class threeSeashells extends Component {
       </Router>
     );
   }
+}
+
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    console.log("Props: ", props.data);
+    this.state = {text: props.data};
+  }
+
+  render() {
+    return (
+        <View style={styles.container}>
+            <Text>{this.state.text}</Text>
+          </View>
+    );
+  }
 
 }
 
