@@ -16,6 +16,7 @@ import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 class threeSeashells extends Component {
 
   _signIn() {
+    console.log("About to sign in!");
     GoogleSignin.signIn().then((user) => {
       console.log(user);
       this.setState({user: user})
@@ -41,10 +42,9 @@ class threeSeashells extends Component {
         </Text>
         <GoogleSigninButton
           style={{width: 312, height:48}}
-          size={GoogleSigninButton.Size.Icon}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn.bind(this)}
-        />
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Light}
+          onPress={this._signIn.bind(this)}/>
       </View>
     );
   }
