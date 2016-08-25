@@ -11,8 +11,21 @@ import {
   Text,
   View
 } from 'react-native';
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
 class threeSeashells extends Component {
+
+  _signIn() {
+    GoogleSignin.signIn().then((user) => {
+      console.log(user);
+      this.setState({user: user})
+    })
+    .catch((err) => {
+      console.log('WRONG SIGN-IN', err);
+    })
+    .done();
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -26,6 +39,12 @@ class threeSeashells extends Component {
           Press Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
+        <GoogleSigninButton
+          style={{width: 48, width:48}}
+          size={GoogleSigninButton.Size.Icon}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn.bind(this)}
+        />
       </View>
     );
   }

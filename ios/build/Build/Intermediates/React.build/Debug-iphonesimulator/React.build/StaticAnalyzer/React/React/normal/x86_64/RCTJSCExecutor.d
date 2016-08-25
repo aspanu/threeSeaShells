@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Executors/RCTJSCExecutor.mm \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Executors/RCTJSCExecutor.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Modules/RCTDevMenu.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Profiler/RCTJSCProfiler.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Modules/RCTRedBox.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Base/RCTErrorCustomizer.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Modules/RCTSourceCode.h \
+  /Users/aspanu/dev/threeSeaShells/node_modules/react-native/React/Executors/RCTJSCWrapper.h

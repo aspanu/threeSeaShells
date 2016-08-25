@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/aspanu/dev/threeSeaShells/ios/threeSeashells/AppDelegate.m \
+  /Users/aspanu/dev/threeSeaShells/ios/threeSeashells/AppDelegate.h \
+  ../node_modules/react-native/React/Base/RCTBundleURLProvider.h \
+  ../node_modules/react-native/React/Base/RCTRootView.h \
+  ../node_modules/react-native/React/Base/RCTBridge.h \
+  ../node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  ../node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  ../node_modules/react-native/React/Base/RCTBridgeModule.h \
+  ../node_modules/react-native/React/Base/RCTDefines.h \
+  ../node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  ../node_modules/react-native/React/Base/RCTInvalidating.h \
+  ../node_modules/react-native-google-signin/ios/RNGoogleSignin/RNGoogleSignin.h \
+  ../node_modules/react-native/React/Base/RCTConvert.h \
+  ../node_modules/react-native/React/CSSLayout/CSSLayout.h \
+  ../node_modules/react-native/React/CSSLayout/CSSMacros.h \
+  ../node_modules/react-native/React/Views/RCTAnimationType.h \
+  ../node_modules/react-native/React/Views/RCTBorderStyle.h \
+  ../node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  ../node_modules/react-native/React/Base/RCTLog.h \
+  ../node_modules/react-native/React/Base/RCTAssert.h \
+  ../node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Modules/module.modulemap \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GIDSignInButton.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GIDSignIn.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GIDProfileData.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GIDGoogleUser.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GIDAuthentication.h \
+  /Users/aspanu/dev/threeSeaShells/ios/GoogleSdk/GoogleSignIn.framework/Headers/GoogleSignIn.h
