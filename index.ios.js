@@ -5,23 +5,24 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, NavigatorIOS } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
-import {LoginComponent} from './js/Login.js'
-import {NextDate} from './js/NextDate.js'
+import LoginComponent from './js/Login.js'
+import NextDate from './js/NextDate.js'
 
 class threeSeashells extends Component {
 
   render() {
     return (
       <Router>
-        <Scene key="root" component={LoginComponent}>
+        <Scene key="root">
           <Scene key="login" component={LoginComponent}
-            title="Login" initial={true}/>
-          <Scene key="nextDate" component={NextDate} title="NextDate"/>
+            title="Login Page" initial={true} />
+          <Scene key="nextDate" component={NextDate}
+            title="Your Next Date" />
         </Scene>
       </Router>
-    )
+    );
   }
 
 }

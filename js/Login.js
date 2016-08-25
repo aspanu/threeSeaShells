@@ -18,9 +18,6 @@ import {Actions} from 'react-native-router-flux';
 export default class LoginComponent extends Component {
 
   render() {
-
-    console.log("- - - > Just a test message")
-
     return (
         <View style={styles.container}>
             <Container>
@@ -32,18 +29,12 @@ export default class LoginComponent extends Component {
 
                   <Button
                     style={styles.button}
-                    onPress={Actions.NextDate}
+                    onPress={Actions.nextDate({name: this.refs.name})}
                   > Enter </Button>
                 </Content>
             </Container>
           </View>
-            /* <GoogleSigninButton
-          style={{width: 312, height:48}}
-          size={GoogleSigninButton.Size.Icon}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn.bind(this)}
-        />*/
-
+          
     );
   }
 }
