@@ -7,8 +7,9 @@ import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
+  Text
 } from 'react-native';
-import {  Text,
+import {
   Container,
   Content,
   Icon,
@@ -63,7 +64,23 @@ export default class NextDate extends Component {
         <View style={styles.home}>
           <Container>
             <Content>
-              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='cog' style={{ color: 'green'}}/> It's not your duty day today!</Text>
+              <Text style={{fontSize: 30,textAlign: 'center'}}>
+                <Icon name='ios-cog' style={{ color: 'green'}}/> It's not your duty day today!
+              </Text>
+             </Content>
+           </Container>
+        </View>
+      );
+    } else {
+      return (
+        <View style={styles.home}>
+          <Container>
+            <Content>
+            <Text style={{fontSize: 30,textAlign: 'center'}}>
+               <Icon name='ios-person' style={{ color: 'red', paddingRight: 5}}/> Access denied</Text>
+               <Text style={{fontSize: 25, paddingTop: 35, textAlign: 'center'}}>
+                You don't work here. YET. We're hiring.
+              </Text>
              </Content>
            </Container>
         </View>
@@ -73,17 +90,10 @@ export default class NextDate extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    paddingTop: 150
-  },
   home: {
    flex: 3,
    backgroundColor: '#F5FCFF',
-   paddingTop: 150
+   paddingTop: 100
  },
   welcome: {
     fontSize: 20,
@@ -95,12 +105,8 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  input: {
-    width: 250
-  },
   button: {
-    flex: 1,
-
+    flex: 3,
     marginTop: 5
   }
 });

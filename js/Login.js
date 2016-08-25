@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  AsyncStorage,
 } from 'react-native';
 //import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 import { Container, Content, Button, List, ListItem, InputGroup, Input, Icon } from 'native-base';
@@ -17,8 +18,34 @@ import {Actions} from 'react-native-router-flux';
 
 export default class LoginComponent extends Component {
 
-  buttonPress() {
-    Actions.nextDate(this.state.inputName);
+  constructor(props) {
+    super(props);
+    console.log("Saving shit");
+    this.goFuckYourself();
+    console.log("Saved shit!");
+  }
+
+  async goFuckYourself() {
+    try {
+      await AsyncStorage.setItem("gerhard", "1");
+      await AsyncStorage.setItem("gareth", "1");
+      await AsyncStorage.setItem("michael", "2");
+      await AsyncStorage.setItem("anton", "3");
+      await AsyncStorage.setItem("gesa", "2");
+      await AsyncStorage.setItem("uwe", "2");
+      await AsyncStorage.setItem("marcin", "3");
+      await AsyncStorage.setItem("adrian", "2");
+    } catch (error) {
+      console.log("Be sadface.");
+    }
+  }
+
+  async buttonPress() {
+    var userState = await AsyncStorage.getItem(this.state.inputName);
+    if(userState == null) {
+      userState = '3';
+    }
+    Actions.nextDate(userState);
   }
 
   render() {
