@@ -98,7 +98,7 @@ class Home extends Component {
         <Container>
               <Content>
 
-              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='lihgt-up' style={{ color: 'green'}}/> It's not your duty day today!</Text>
+              <Text style={{fontSize: 30,textAlign: 'center'}}><Icon name='cog' style={{ color: 'green'}}/> It's not your duty day today!</Text>
 
               </Content>
           </Container>
