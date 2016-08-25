@@ -40,7 +40,7 @@ class threeSeashells extends Component {
           Cmd+D or shake for dev menu
         </Text>
         <GoogleSigninButton
-          style={{width: 48, width:48}}
+          style={{width: 312, height:48}}
           size={GoogleSigninButton.Size.Icon}
           color={GoogleSigninButton.Color.Dark}
           onPress={this._signIn.bind(this)}
